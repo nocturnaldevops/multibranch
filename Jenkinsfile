@@ -7,8 +7,14 @@ pipeline
         {
             steps
             {
-                git branch: 'main', url: 'https://github.com/nocturnaldevops/NewProject24.git'
+                git branch: 'feature2', url: 'https://github.com/nocturnaldevops/multibranch.git'
             }
         }
+        stage("contbuild")
+        {
+ steps{
+            sh 'mvn package'
+        }
+}
 }
 }
